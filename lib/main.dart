@@ -16,6 +16,7 @@ class FlowmodoroApp extends StatelessWidget {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (context) => StatsProvider())],
       child: MaterialApp(
+        theme: ThemeData.dark(),
         title: 'Flowmodoro App',
         initialRoute: 'home_screen',
         routes: {

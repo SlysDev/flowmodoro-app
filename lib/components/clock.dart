@@ -11,8 +11,8 @@ class Clock extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-            width: 240,
-            height: 240,
+            width: 250,
+            height: 250,
             child: DecoratedBox(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -28,13 +28,17 @@ class Clock extends StatelessWidget {
               width: 180,
               height: 180,
               child: CircularProgressIndicator(
-                value: 0.5,
+                value: 1,
                 strokeWidth: 14,
+                color: kLightPrimaryColor,
               ),
             ),
           ),
           Text(
             '0:00',
+            style: kTitleTextStyle.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),

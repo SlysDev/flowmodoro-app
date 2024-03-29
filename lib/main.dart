@@ -2,6 +2,7 @@ import 'package:flowmodoro_app/providers/stats_provider.dart';
 import 'package:flowmodoro_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const FlowmodoroApp());
@@ -16,7 +17,9 @@ class FlowmodoroApp extends StatelessWidget {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (context) => StatsProvider())],
       child: MaterialApp(
-        theme: ThemeData.dark(),
+        theme: ThemeData.dark().copyWith(
+          textTheme: GoogleFonts.jostTextTheme(),
+        ),
         title: 'Flowmodoro App',
         initialRoute: 'home_screen',
         routes: {

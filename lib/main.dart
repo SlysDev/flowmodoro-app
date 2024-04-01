@@ -1,4 +1,5 @@
 import 'package:flowmodoro_app/providers/stats_provider.dart';
+import 'package:flowmodoro_app/providers/time_provider.dart';
 import 'package:flowmodoro_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +16,10 @@ class FlowmodoroApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (context) => StatsProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (context) => StatsProvider()),
+        ChangeNotifierProvider(create: (context) => TimeProvider()),
+      ],
       child: MaterialApp(
         theme: ThemeData.dark().copyWith(
           textTheme: GoogleFonts.jostTextTheme(),
